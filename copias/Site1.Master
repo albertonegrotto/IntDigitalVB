@@ -1,0 +1,221 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.Master.vb" Inherits="INTeatroDig.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta name="Author" content="Alberto Negrotto, Marcelo Zanolin" />
+    <meta name="date" content="2010-11-11T22:22:22+22:22" />
+    <meta name="description" content="Instituto Nacional del Teatro" />
+    <meta name="keywords" content="Instituto Nacional del Teatro, República Argentina, Teatro, Alberto Negrotto, Marcelo Zanolin" />
+	<title>Servicios Web - INTeatro Digital</title>
+
+    <script src="Scripts/jquery-1.3.2.js" type="text/javascript"></script>
+    <script src="Scripts/jquery.validate.js" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+	<link href="Styles.css" rel="stylesheet" />
+
+	<script language="javascript" type="text/javascript">
+		<!--
+		function bookmarksite(title, url) {
+			if (document.all)
+				window.external.AddFavorite(url, title);
+			else if (window.sidebar)
+				alert("Press Ctrl+D keys to bookmark our site");
+		}
+		//-->
+	</script>
+
+</head>
+
+<body topmargin="0" leftmargin="0" background="images/fondoRojo.png">
+    <form id="form1" runat="server" method="post">
+<br />
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td width="100%" align="center">
+
+<table border="0" cellpadding="0" cellspacing="0" width="970">
+    <!-- Banner superior -->
+	<tr>
+		<td align="center" valign="top">
+		    <img src="images/bannerSuperior.jpg" width="970" height="200" alt="" border="0"/>
+        </td>
+	</tr>
+    <!-- End of Banner superior -->
+
+    <!-- Menu -->
+	<tr>
+		<td class="TextoMenuBlanco">
+            <asp:HyperLink ID="lnkImpresion" NavigateUrl="" cssclass="linksBlanco" runat="server">Menú de Impresión</asp:HyperLink>
+			&nbsp;|&nbsp;
+		    <a href="contacto.aspx" class="linksBlanco">Contacto</a>
+			&nbsp;|&nbsp;
+			<a href="javascript:bookmarksite('Instituto Nacional del Teatro','http://www.inteatro.gob.ar')" class="linksBlanco">Agregar a Favoritos</a>
+			&nbsp;|&nbsp;
+			<a href="http://www.inteatro.gob.ar" class="linksBlanco"> Home</a>&nbsp;
+			&nbsp;
+		</td>
+	</tr>
+    <!-- End of Menu -->
+
+    <!-- Body -->
+	<tr>
+		<td align="center" valign="top">
+
+			<!-- Table Container -->
+			<table class="Texto" border="0" cellpadding="2" cellspacing="0" width="970">
+				<tr>
+
+					<!-- Columna 1 -->
+					<td width="220" align="center" valign="top">
+
+						<!-- Table Container Tabla lateral izquierdo -->
+						<table class="TextoTablaLateral" border="0" cellpadding="0" cellspacing="1" width="100%" height="470" bgcolor="#11467F">
+							<tr>
+								<td width="100%" align="center" valign="top">
+
+									<!-- Table Menú izquierdo -->
+									<table border="0" cellpadding="0" cellspacing="1" width="100%" class="TextoTablaLateral">
+										<tr>
+											<td height="22">
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                                
+                                                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/InicioIndiv.aspx" ToolTip="Alta de Datos Individuales, para personas físicas o jurídicas" CssClass="linksBlancoTitular" ImageUrl="images/mnAltaDatosIndividual.png">
+                                                    Alta de Datos Individuales
+                                                </asp:HyperLink>
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                            </td>
+										</tr>
+										<tr>
+											<td height="4">
+                                                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/LoginInicio.aspx" ToolTip="Actualización de Datos Individuales, para personas físicas o jurídicas" CssClass="linksBlancoTitular" ImageUrl="images/mnActualizacionDatosIndividual.png">
+                                                    Actualizacion de Datos
+                                                </asp:HyperLink>
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                            </td>
+										</tr>
+										<tr>
+											<td height="4">
+                                                <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/registro.aspx" ToolTip="Registro" CssClass="linksBlancoTitular" ImageUrl="images/mnRegistro.png">
+                                                    Cambio de clave
+                                                </asp:HyperLink>
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                            </td>
+										</tr>
+										<tr>
+											<td height="4">
+                                                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/cambioDeClave.aspx" ToolTip="Cambio de clave" CssClass="linksBlancoTitular" ImageUrl="images/mnCambioDeClave.png">
+                                                    Cambio de clave
+                                                </asp:HyperLink>
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                                <asp:HyperLink ID="lnkConstancias" runat="server" NavigateUrl="~/registroImpresion.aspx" ToolTip="Menú de Impresión" CssClass="linksBlancoTitular" ImageUrl="images/mnConstancias.png">
+                                                    Constancias
+                                                </asp:HyperLink>
+											</td>
+										</tr>
+										<tr>
+											<td height="4">
+                                            </td>
+										</tr>
+										
+										<tr>
+											<td height="100">
+											</td>
+										</tr>
+									</table>
+									<!-- End of Table Menú izquierdo -->
+
+								</td>
+							</tr>
+						</table>
+						<!-- End of Table Container Tabla lateral izquierdo -->
+
+					</td>
+					<!-- End of Columna 1 -->
+
+					<!-- Columna 2 -->
+					<td width="750" valign="top">
+					
+						<!-- Table Container Tabla Panel Central -->
+						<table class="TextoTablaCentral" border="0" cellpadding="0" cellspacing="1" width="100%" >
+							<tr>
+								<td width="100%" align="center" valign="top" height="1">
+
+                                    <!-- ContentPlaceHolder Panel Central -->
+                                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    <!-- End of ContentPlaceHolder Panel Central -->
+
+								</td>
+							</tr>
+						</table>
+						<!-- End of Table Container Tabla Panel Central -->
+									
+					</td>
+					<!-- End of Columna 2 -->
+
+				</tr>
+			</table>
+			<!-- End of Table Container -->
+
+		</td>
+	</tr>
+    <!-- End of Body -->
+	
+    <!-- Footer -->
+	<tr>
+		<td colspan="2">
+
+			<!-- Table Footer -->
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" class="TextoMarca">
+			    <tr height="10"><td></td></tr>
+				<tr>
+					<td width="100%">
+                        Av. Santa Fe 1243 7º Piso (C1059ABG) / Ciudad Autónoma de Buenos Aires, República Argentina <img border="0" src="images/flagArgentina.gif" width="16" height="11" alt="República Argentina" /><br />
+                        Teléfono (011) 4815-6661<br />
+                        Optimizado para <a class="links" href="http://www.microsoft.com/windows/ie/downloads/default.asp" target="_blank">Internet Explorer 4.+</a> <a class="links" href="http://www.getfirefox.com/" target="_blank">Mozilla Firefox</a><br />
+                        Versión 1.0.41 29/05/2012
+					</td>
+				</tr>
+			    <tr height="10"><td></td></tr>
+			</table>
+			<!-- End of Table Footer -->
+
+		</td>
+	</tr>
+    <!-- End of Footer -->
+</table>
+
+		</td>
+	</tr>
+
+</table>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,737 @@
+﻿body {
+    font-family: Verdana;
+    font-size: medium;
+    margin: 0px;
+}
+
+#topContent {
+    text-align: center ;
+    background-color:  #EAEAEA ;    
+    text-decoration: none;    
+    padding: 10px;  
+    height: 70px;     
+}
+
+#leftContent {
+    width: 150px;    
+    padding: 10px;
+    font-size: 80%;
+    text-align: left;
+    position: absolute;
+    background-color: #D8E1E2;
+    top: 82px;
+    margin-top: 10px;
+    left: 0px;
+	height: 400px;
+}
+
+#mainContent {
+    text-align: left;
+    margin-left: 160px;
+    padding: 10px;
+    height: 400px;
+    background-color: #EFEFEF;
+}
+
+#footerContent 
+{
+	text-align: center;
+    font-size: small;
+    padding: 5px;
+}
+.Texto
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 9pt;
+    color: #333333;
+	background-color: #FFFFFF;
+}
+.TextoError
+{
+    font-family: Tahoma, Verdana, Arial;
+	font-size: 9pt;
+	color: #FF0000;
+	background-color: #FFFFFF;
+	text-align: Justify
+}
+.TextoTooltiplinks
+{
+    font-family: Tahoma, Verdana, Arial;
+	font-size: 9pt;
+	color: #00FF00;
+	background-color: #FFFFFF;
+	text-align: Justify
+}
+.TextoComentario
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+    color: #0033CC;
+    text-align: center;
+}
+.TextoComentarioRojo
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 9pt;
+    color: #FF0000;
+    text-align: center;
+}
+.TextoComentarioViejo
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 8pt;
+    color: #092C48;
+    text-align: center;
+}
+.TextoComentarioGrande
+{
+    font-family: Tahoma, Verdana, Arial;
+    font-size: 10pt;
+    color: #092C48;
+    text-align: center;
+}
+.TextoSubtitulo
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11pt;	
+	color: #333333;
+	background-color: #EFEFEF;
+	text-align: Center;
+	text-decoration: none
+}
+.TextoLink
+{
+    CURSOR: hand;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px
+}
+.TextoInput
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 11px
+}
+.TextoTitulo
+{
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 10pt;
+	color: #000000;
+	text-align: Center;
+	text-decoration: none;
+	font-weight: bolder;
+	line-height: 20px;
+	letter-spacing: 4px
+}
+.ButtonSmall
+{
+	text-decoration: none;  
+	width: 40px;
+	text-align: center;
+	font: bold 11px Tahoma, Verdana, Arial;
+    cursor: hand;
+	background-color: #0772B1;
+	color: White
+} 
+.ButtonNormal
+{
+	text-decoration: none;   
+	width: 80px;
+	text-align: center;
+	font: bold 11px Tahoma, Verdana, Arial;
+    cursor: hand;
+}  
+.ButtonLarge
+{
+	text-decoration: none;   
+	width: 128px;
+	text-align: center;
+	font: bold 11px Tahoma, Verdana, Arial;
+    cursor: hand;
+}  
+.ButtonExtraLarge
+{
+	text-decoration: none;   
+	width: 160px;
+	text-align: center;
+	font: bold 11px Tahoma, Verdana, Arial;
+    cursor: hand;
+}  
+.Button
+{
+	text-decoration: none;
+	text-align: center;
+	font: bold 11px Tahoma, Verdana, Arial;
+    cursor: hand;
+}  
+.Grilla
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: Justify
+}
+.Grilla:Footer  {
+	font-size:11px;
+	background-color: #eee;
+	text-align: left;
+	padding:0px 0px 0px 50px;
+	margin:1000px 0px 0px 0px;
+	border-style:solid;
+	border-color:black;
+	border-width:1px 0px;
+	line-height:11px
+}
+.TextoScroller
+{
+	font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 7pt;
+    LINE-HEIGHT: 7pt;
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000
+}
+.links
+{
+    COLOR: #6633FF;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline;
+    LINE-HEIGHT: 11pt;
+    CURSOR: HAND
+}
+.links:hover
+{
+    COLOR: #FF0000;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 9pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline;
+    LINE-HEIGHT: 11pt
+}
+.linksBold
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: underline
+}
+.linksBold:hover
+{
+    COLOR: #F5B935;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: underline
+}
+.linksTabla
+{
+    COLOR: #000000 ;
+	font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.linksTabla:hover
+{
+    COLOR: #DD0000 ;
+	font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 7pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline
+}
+.linksBlanco
+{
+    COLOR: #FFFFFF;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline;
+    LINE-HEIGHT: 11pt;
+    CURSOR:HAND
+}
+.linksBlanco:hover
+{
+    COLOR: #F5B935;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal;
+    TEXT-DECORATION: underline;
+    LINE-HEIGHT: 11pt;
+}
+.linksBlancoTitular
+{
+    COLOR: #FFFFFF;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+    CURSOR:HAND
+}
+.linksBlancoTitular:hover
+{
+    COLOR: #DD0000;
+    font-family: Tahoma, Verdana, Arial;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: underline
+}
+.linksNoticias
+{
+	color: #0000FF;
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 11px;
+	line-height: 15px
+}
+.linksFotos
+{
+    CURSOR:HAND
+}
+.noticias
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 11px
+}
+.form2
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM-STYLE: ridge;
+    BORDER-LEFT-STYLE: ridge;
+    BORDER-RIGHT-STYLE: ridge;
+    BORDER-TOP-STYLE: ridge;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 12px;
+    LINE-HEIGHT: 12px
+}
+.barraznews
+{
+    BACKGROUND-COLOR: #f0f0ef;
+    BORDER-BOTTOM: #ffffff 2px solid;
+    BORDER-LEFT: black 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 16px
+}
+.espacio
+{
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 1px;
+    LINE-HEIGHT: 1px
+}
+.formsubtitulo
+{
+    BACKGROUND-COLOR: #d2dcf1;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: #ffffff 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 15px;
+    MARGIN-LEFT: 6px
+}
+.formsubtituloDerecho
+{
+    BACKGROUND-COLOR: #d2dcf1;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: #ffffff 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 15px;
+    MARGIN-LEFT: 6px
+}
+.formsubtitulo_centrado
+{
+    BACKGROUND-COLOR: #d2dcf1;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: #ffffff 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 15px;
+    TEXT-ALIGN: center
+}
+.formsubtitulo_oscuro
+{
+    BACKGROUND-COLOR: #000066;
+    COLOR: #ffffff;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 15px;
+    MARGIN-LEFT: 6px
+}
+.formtexto
+{
+    BACKGROUND-COLOR: #e8ecf5;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: black 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 14px
+}
+.formtextoselected
+{
+    BACKGROUND-COLOR: #e8ecf5;
+    BORDER-BOTTOM: #ffffff 1px solid;
+    BORDER-LEFT: black 0px solid;
+    BORDER-RIGHT: black 0px solid;
+    BORDER-TOP: black 0px solid;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 14px
+}
+.links3:hover
+{
+    COLOR: #1f54c5;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal;
+    LINE-HEIGHT: 15px;
+    TEXT-DECORATION: underline
+}
+.links2:hover
+{
+    COLOR: #a5a5a5;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    TEXT-DECORATION: none
+}
+.linkbarra
+{
+    COLOR: #a2a2a2;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 12px;
+    TEXT-DECORATION: none
+}
+.linkbarra:hover
+{
+    COLOR: #1f54c5;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 10px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 12px;
+    TEXT-DECORATION: none
+}
+.linksubmenu
+{
+    COLOR: #003399;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 13px;
+    TEXT-DECORATION: none
+}
+.trVacio
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 25px
+}
+.submit
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #000066 1px solid;
+    BORDER-LEFT: #000066 1px solid;
+    BORDER-RIGHT: #000066 1px solid;
+    BORDER-TOP: #000066 1px solid;
+    COLOR: #000066;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt
+}
+SELECT
+{
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    LINE-HEIGHT: 9pt
+}
+.inputmultiple
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #cccccc 1px solid;
+    BORDER-LEFT: #666666 2px solid;
+    BORDER-RIGHT: #cccccc 1px solid;
+    BORDER-TOP: #666666 2px solid;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 9pt;
+    PADDING-BOTTOM: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+.inputmultiple INPUT
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none
+}
+IMG.imgButton
+{
+    CURSOR: hand
+}
+.recuadro
+{
+    BORDER-BOTTOM: thin outset;
+    BORDER-LEFT: thin outset;
+    BORDER-RIGHT: thin outset;
+    BORDER-TOP: thin outset;
+    MARGIN: 1px
+}
+.Titulo
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    COLOR: #163688;
+    FONT-FAMILY: "Times New Roman", Times, serif;
+    FONT-SIZE: 15px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 25px
+}
+.TextoFixed
+{
+    FONT-FAMILY: Courier New;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 11px
+}
+.TextoBold
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bolder
+}
+.TextoBoldCenter
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-weight: bolder;
+	text-align: Center
+}
+.TextoBoldBlanco
+{
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bolder
+}
+.TextoBoldDisable
+{
+    COLOR: #ccccff;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bolder
+}
+.TextoLink
+{
+    CURSOR: hand;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px
+}
+.TextoInput
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 11px
+}
+.TextoNavegacion
+{
+    BACKGROUND-COLOR: #ffffff;
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px
+}
+.TextoBoldTree
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    COLOR: #000000;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bolder;
+	text-decoration: none
+}
+.TextoTree
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    COLOR: #000000;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px;
+	text-decoration: none
+}
+.TextoTreeColor1
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    COLOR: #006699;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px;
+	text-decoration: none
+}
+.TextoTreeColor2
+{
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    COLOR: #CC3366;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 10px;
+	text-decoration: none
+}
+.SubTitulo
+{
+    BACKGROUND-COLOR: #ccccff;
+    COLOR: #006699;
+    FONT-FAMILY: tahoma, verdana, arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bolder;
+    LINE-HEIGHT: 11px
+}
+.Label
+{
+    BACKGROUND-COLOR: #f7f3ff;
+    FONT-FAMILY: Tahoma, Verdana, Arial;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 10px
+}
+.CursorHand
+{
+    CURSOR: hand
+}
+.TextoMenuBlanco
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	color: #FFFFFF;
+	text-align: Right;
+	height: 12pt;
+	background-image: url('images/fondoGris.gif')
+}
+.TextoTablaCentral
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: Justify
+}
+.TextoTablaLateral
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	background-color: #B8C1D1;
+	color: #000000;
+	text-align: Justify
+}
+.TextoMarca
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	color: #000000;
+	background-color: #EEEEEE;
+	text-align: center
+}
+.TextoContactUs
+{
+	font-family: 'Lucida Sans Unicode', Tahoma, Verdana, Arial;
+	font-size: 8pt;
+	color: #000000;
+	background-color: #F8F8F8;
+	text-align: center
+}
+.SeparadorStandard
+{
+	font-family: Tahoma, Verdana, Arial;
+	font-size: 1px;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: Center
+}
+.SeparadorBottom
+{
+	font-family: 'Lucida Sans Unicode', Tahoma, Verdana, Arial;
+	font-size: 4px;
+	background-color: #FFFFFF;
+	color: #000000;
+	text-align: Center
+}
+.mGrid {   
+    width: 100%;   
+    background-color: #fff;   
+    margin: 5px 0 10px 0;   
+    border: solid 1px #525252;   
+    border-collapse:collapse;
+    font-size: 11px;
+    font-family: Tahoma, Verdana, Arial, 'Lucida Sans Unicode'
+}  
+.mGrid input {   
+    font-size: 11px;
+    font-family: Tahoma, Verdana, Arial, 'Lucida Sans Unicode'
+}  
+.mGrid td {   
+    padding: 2px;   
+    border: solid 1px #c1c1c1;   
+    color: #717171;   
+}  
+.mGrid th {   
+    padding: 4px 2px;   
+    color: #fff;   
+    background: #424242 url(images/grd_head.png) repeat-x top;   
+    border-left: solid 1px #525252;   
+    font-size: 0.9em;   
+}  
+.mGrid .alt { background: #fcfcfc url(images/grd_alt.png) repeat-x top; }  
+.mGrid .pgr { background: #424242 url(images/grd_pgr.png) repeat-x top; }  
+.mGrid .pgr table { margin: 5px 0; }  
+.mGrid .pgr td {   
+    border-width: 0;   
+    padding: 0 6px;   
+    border-left: solid 1px #666;   
+    font-weight: bold;   
+    color: #fff;   
+    line-height: 12px;   
+ }     
+.mGrid .pgr a { color: #666; text-decoration: none; }  
+.mGrid .pgr a:hover { color: #000; text-decoration: none; }  

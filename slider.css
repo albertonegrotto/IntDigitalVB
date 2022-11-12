@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    clear: both;
+}
+#fotos {
+
+
+}
+
+#fotos ul{
+
+}
+
+#fotos li{
+
+}
+
+#fotos li img{
+
+}
+
+
+
+ol#controls{
+        margin:1em 0;
+        padding:0;
+        height:28px;
+}
+ol#controls li{
+        margin:0 10px 0 0;
+        padding:0;
+        float:left;
+        list-style:none;
+        height:28px;
+        line-height:28px;
+}
+ol#controls li a{
+        float:left;
+        height:28px;
+        line-height:28px;
+        border:1px solid #ccc;
+        background:#ffffff;
+        color:#555;
+        padding:0 10px;
+        text-decoration:none;
+}
+ol#controls li.current a{
+        background:#666666;
+        color:#fff;
+}
+ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
+
+/*#prevBtn, #nextBtn{
+	display:block;
+	width:30px;
+	height:77px;
+	position:absolute;
+	left:-30px;
+	top:71px;
+}*/
+
+/*#nextBtn{
+	left:696px;
+}*/
+
+/*#prevBtn a, #nextBtn a{
+	display:block;
+	width:30px;
+	height:77px;
+	background:url(../../scripts/easyslider1.5/images/btn_prev.gif) no-repeat 0 0;
+}*/
+
+/*#nextBtn a{
+	background:url(../../scripts/easyslider1.5/images/btn_next.gif) no-repeat 0 0;
+}*/

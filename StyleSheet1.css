@@ -1,0 +1,110 @@
+﻿body {
+}
+
+#marco
+{
+	position:absolute;
+	width:30%;
+	background-color:#dedede;
+	display:block;
+}
+
+.menu
+{
+	position:relative;
+	display:block;
+	clear:both;
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:0.8em;
+	width:100%;
+}
+
+.move{
+	display:inline-block;
+	position:relative;
+	cursor:pointer;
+	text-decoration:none;
+	width:100%;
+	height:100px;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+
+.int
+{
+	display:block;
+	float:left;
+	border:none;
+	position:absolute;
+	width:0;
+	height:100px;
+	top:0px;
+	left:0;
+	z-index:100;
+	float:left;
+	
+}
+
+.wrap
+{
+	display:block;
+	position:relative;
+	float:left;
+	width:50%;
+	top:0;
+	left:0;
+/*	height: 100px !important;*/
+	padding: 0;
+	margin: 0;
+	border: none;
+	box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+	
+}
+
+.wrap img
+{
+	display:block;
+	position:relative;
+	width:100%;
+}
+
+.bg{}
+
+.box
+{
+	clear:both;
+	position:relative;
+	float:left;
+	width:100%;
+	display:none;
+	padding:6px;
+	background-color: #F3E2A9;
+	-mz-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.3);
+	z-index: 1000 !important;
+	border: solid  #d19405 1px;
+	
+}
+
+.mnu
+{
+	display:block;
+	width:100%;
+	position:relative;
+	line-height: 15px;
+
+}
+
+.mnuli
+{
+	display:block;
+	width:100%;
+	position: relative;
+	margin-left: 15px;
+	padding: 0;
+	height:auto !important; 
+	list-style: none;
+}

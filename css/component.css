@@ -1,0 +1,684 @@
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot');
+	src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'icomoon';
+		src: url('../fonts/icomoon.svg#icomoon') format('svg');
+	};
+}
+
+.icon-team, .icon-blog, .icon-home, .icon-portfolio, .icon-services, .icon-contact, .icon-menu {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-team:before {
+	content: "\e000";
+}
+
+.icon-blog:before {
+	content: "\e001";
+}
+
+.icon-home:before {
+	content: "\e002";
+}
+
+.icon-portfolio:before {
+	content: "\e003";
+}
+
+.icon-services:before {
+	content: "\e004";
+}
+
+.icon-contact:before {
+	content: "\e005";
+}
+
+.icon-menu:before {
+	content: "\f0c9";
+}
+
+a, li {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Global CSS that are applied for all screen sizes */
+
+.menuContainer ul {
+	max-width: 1240px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+/*	font-size: 1.5em;
+	font-weight: 300;*/
+}
+
+.menuContainer li span {
+	display: block;
+}
+
+.menuContainer a {
+	display: block;
+	color: rgba(249, 249, 249, .9);
+	text-decoration: none;
+	-webkit-transition: color .5s, background .5s, height .5s;
+	-moz-transition: color .5s, background .5s, height .5s;
+	-o-transition: color .5s, background .5s, height .5s;
+	-ms-transition: color .5s, background .5s, height .5s;
+	transition: color .5s, background .5s, height .5s;
+}
+
+.menuContainer i{
+	/* Make the font smoother for Chrome */
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+/* Remove the blue Webkit background when element is tapped */
+
+a, button {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Hover effect for the whole navigation to make the hovered item stand out */
+
+.menuContainer ul:hover a {
+	color: rgba(249, 249, 249, .5);
+}
+
+.menuContainer ul:hover a:hover {
+	color: rgba(249, 249, 249, 0.99);
+}
+
+/* Adding some background color to the different menu items */
+
+.menuContainer li:nth-child(6n+1) {
+	background: rgb(228, 0, 43);
+}
+
+.menuContainer li:nth-child(6n+2) {
+	background: rgb(255, 184, 28);
+}
+
+.menuContainer li:nth-child(6n+3) {
+	background: rgb(22, 145, 190);
+}
+
+.menuContainer li:nth-child(6n+4) {
+	background: rgb(228, 0, 43);
+}
+
+.menuContainer li:nth-child(6n+5) {
+	background: rgb(255, 184, 28);
+}
+
+.menuContainer li:nth-child(6n+6) {
+	background: rgb(22, 145, 190);
+}
+
+/*.menuContainer li:nth-child(8n+7) {
+	background: rgb(27, 54, 71);
+}
+
+.menuContainer li:nth-child(8n+8) {
+	background: rgb(21, 40, 54);
+}*/
+
+
+
+.menuContainer ul li {
+	transition: opacity 2s;
+}
+
+.menuContainer{
+    position: relative;
+    padding-top:10px;
+    /* background-color: blue; */
+    transition: top 2s left 2s;
+}
+
+
+.beHere{
+    opacity:1;
+    
+}
+
+.notHere{
+    position:absolute;
+    top:0;
+    left:0;
+    
+}
+
+.mainContainer{
+	height:300px;
+	transition: height cubic-bezier() 3s;
+}
+
+
+/* .notHere{
+    display:none;
+    transition: display 10s;
+} */
+
+/* .menuContainer ul li{
+    transition: display 10s;
+} */
+
+
+/* For screen bigger than 800px */
+@media (min-width: 50em) {
+/*	.datosPersonales{
+		margin-top:200px
+	}
+
+	.config{
+		margin-top:200px
+	}
+
+	.nuevoRegistro{
+		margin-top:200px
+	}
+
+	.registros{
+		margin-top:200px
+	}
+	.config{
+		margin-top:200px
+	}
+
+	.registros{
+		margin-top:200px
+	}
+	 Transforms the list into a horizontal navigation */
+	.menuContainer li {
+		float: left;
+		width: 16.6%;
+		text-align: center;
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+	}
+
+	.menuContainer a {
+		display: block;
+		width: auto;
+	}
+
+	.menuContainer li a {
+		color: white !important;
+	}
+
+	/* hover, focused and active effects that add a little colored border to the different items */
+	.menuContainer li:nth-child(6n+1) a:hover,
+	.menuContainer li:nth-child(6n+1) a:active,
+	.menuContainer li:nth-child(6n+1) a:focus {
+		border-bottom: 4px solid rgb(174, 78, 1);
+	}
+
+	.menuContainer li:nth-child(6n+2) a:hover,
+	.menuContainer li:nth-child(6n+2) a:active,
+	.menuContainer li:nth-child(6n+2) a:focus {
+		border-bottom: 4px solid rgb(191, 117, 20);
+	}
+
+
+	.menuContainer li:nth-child(6n+3) a:hover,
+	.menuContainer li:nth-child(6n+3) a:active,
+	.menuContainer li:nth-child(6n+3) a:focus {
+		border-bottom: 4px solid rgb(12, 110, 149);
+	}
+
+	.menuContainer li:nth-child(6n+4) a:hover,
+	.menuContainer li:nth-child(6n+4) a:active,
+	.menuContainer li:nth-child(6n+4) a:focus {
+		border-bottom: 4px solid rgb(10, 75, 117);
+	}
+
+	.menuContainer li:nth-child(6n+5) a:hover,
+	.menuContainer li:nth-child(6n+5) a:active,
+	.menuContainer li:nth-child(6n+5) a:focus {
+		border-bottom: 4px solid rgb(16, 34, 44);
+	}
+
+	.menuContainer li:nth-child(6n+6) a:hover,
+	.menuContainer li:nth-child(6n+6) a:active,
+	.menuContainer li:nth-child(6n+6) a:focus {
+		border-bottom: 4px solid rgb(9, 18, 25);
+	}
+
+	/* Placing the icon */
+	
+	.icon {
+		padding-top: 1.4em;
+	}
+
+	.icon + span {
+		/* margin-top: 2.1em; */
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
+	}
+
+	/* Animating the height of the element*/
+	.menuContainer a {
+		height: 9em;
+	}
+
+	.menuContainer a:hover ,
+	.menuContainer a:active ,
+	.menuContainer a:focus {
+		height: 10em;
+	}	
+
+	/* Making the text follow the height animation */
+	.menuContainer a:hover .icon + span {
+		
+		margin-top: 3.2em;
+		-webkit-transition: margin .5s;
+		-moz-transition: margin .5s;
+		-o-transition: margin .5s;
+		-ms-transition: margin .5s;
+		transition: margin .5s;
+	}
+
+	.menuContainer a:hover .icon +.longText{
+		margin-top:2.2em;
+		margin-bottom:1em;
+	}
+
+	/* Positioning the icons and preparing for the animation*/
+	.menuContainer i {
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0.4em;
+		border-radius: 50%;
+		font-size: 1.8em;
+		box-shadow: 0 0 0 30px transparent;
+		background: rgba(255,255,255,0.1);
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		-webkit-transition: box-shadow .6s ease-in-out;
+		-moz-transition: box-shadow .6s ease-in-out;
+		-o-transition: box-shadow .6s ease-in-out;
+		-ms-transition: box-shadow .6s ease-in-out;
+		transition: box-shadow .6s ease-in-out;
+	}	
+	
+	/* Animate the box-shadow to create the effect */
+	 .menuContainer a:hover i,
+	 .menuContainer a:active i,
+	 .menuContainer a:focus i {		
+		box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
+		-webkit-transition: box-shadow .4s ease-in-out;
+		-moz-transition: box-shadow .4s ease-in-out;
+		-o-transition: box-shadow .4s ease-in-out;
+		-ms-transition: box-shadow .4s ease-in-out;
+		transition: box-shadow .4s ease-in-out;
+	}
+		
+}
+
+@media (min-width: 50em) and (max-width: 61.250em) {
+
+/*
+	.datosPersonales{
+		margin-top:140px
+	}
+
+	.config{
+		margin-top:140px
+	}
+
+	.registros{
+		margin-top:140px
+	}
+	 Creating the 2 column layout using floating elements once again */
+	.menuContainer li {
+		display: block;
+		float: left;
+		width: 50%;
+		height: 128.75px;
+	}
+
+
+	/* Adding some padding to make the elements look nicer*/
+	.menuContainer a {
+		padding: 0.2em;		
+	}
+
+	/* Displaying the icons on the left, and the text on the right side using inlin-block*/
+	.menuContainer li span, 
+	.menuContainer li span.icon {
+		display: inline-block;
+	}
+
+	.menuContainer li span.icon {
+		width: 30%;
+		text-align: left;
+	}
+
+	.menuContainer li span.text {
+		width: 55%;
+		text-align: left;
+	}
+
+	.menuContainer li .icon + span {
+		font-size: 0.7em;
+	}
+
+	/* .longText{
+		font-size:0.5em !important;
+	} */
+
+	.icon + span {
+		position: relative;
+		top: -0.2em;
+	}
+
+	/* Adaptating to the icons to animate the size and border of the rounded background in a more discreet way */
+	.menuContainer li i {
+		display: inline-block;
+		padding: 8% 9%;
+		border: 4px solid transparent;
+		border-radius: 50%;
+		font-size: 1.5em;
+		background: rgba(255,255,255,0.1);
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+	}
+
+	/* Transition effect on the border color */
+	.menuContainer li:hover i,
+	.menuContainer li:active i,
+	.menuContainer li:focus i {
+		border: 4px solid rgba(255,255,255,0.1);
+	}
+
+}
+
+/* The "tablet" and "mobile" version */
+
+/* CSS specific to the 2x3 columns version */
+@media (min-width:32.5em) and (max-width: 49.938em) {
+/*
+	.datosPersonales{
+		margin-top:140px
+	}
+
+	.config{
+		margin-top:140px
+	}
+
+	.nuevoRegistro{
+		margin-top: 140px;
+	}
+
+	.registros{
+		margin-top:140px
+	}
+	 Creating the 2 column layout using floating elements once again */
+	.menuContainer li {
+		display: block;
+		float: left;
+		width: 50%;
+		height: 128.75px;
+	}
+
+
+	/* Adding some padding to make the elements look nicer*/
+	.menuContainer a {
+		padding: 0.8em;		
+	}
+
+	/* Displaying the icons on the left, and the text on the right side using inlin-block*/
+	/* .menuContainer li span, 
+	.menuContainer li span.icon {
+		display: inline-block;
+	} */
+
+	.menuContainer li span.icon {
+		width: 50%;
+	}
+
+	.menuContainer li .icon + span {
+		font-size: 0.7em;
+	}
+
+	/* .longText{
+		font-size:0.5em !important;
+	} */
+
+	.icon + span {
+		position: relative;
+		top: -0.2em;
+	}
+
+	/* Adaptating to the icons to animate the size and border of the rounded background in a more discreet way */
+	.menuContainer li i {
+		display: inline-block;
+		padding: 8% 9%;
+		border: 4px solid transparent;
+		border-radius: 50%;
+		font-size: 1.5em;
+		background: rgba(255,255,255,0.1);
+		-webkit-transition: border .5s;
+		-moz-transition: border .5s;
+		-o-transition: border .5s;
+		-ms-transition: border .5s;
+		transition: border .5s;
+	}
+
+	/* Transition effect on the border color */
+	.menuContainer li:hover i,
+	.menuContainer li:active i,
+	.menuContainer li:focus i {
+		border: 4px solid rgba(255,255,255,0.1);
+	}
+	
+}
+
+@media (max-width: 49.938em) {		
+	.ca-main{
+		
+		font-size: 25px !important;
+	}
+	/* Instead of adding a border, we transition the background color */
+    .menuContainer ul li:nth-child(6n+1) a:hover,
+	.menuContainer ul li:nth-child(6n+1) a:active,
+	.menuContainer ul li:nth-child(6n+1) a:focus {
+		background: rgb(227, 119, 20);
+	}
+
+	.menuContainer li:nth-child(6n+2) a:hover,
+	.menuContainer li:nth-child(6n+2) a:active,
+	.menuContainer li:nth-child(6n+2) a:focus {
+		background: rgb(245, 160, 41);
+	}
+
+	.menuContainer li:nth-child(6n+3) a:hover,
+	.menuContainer li:nth-child(6n+3) a:active,
+	.menuContainer li:nth-child(6n+3) a:focus {
+		background: rgb(44, 168, 219);
+	}
+
+	.menuContainer li:nth-child(6n+4) a:hover,
+	.menuContainer li:nth-child(6n+4) a:active,
+	.menuContainer li:nth-child(6n+4) a:focus {
+		background: rgb(31, 120, 176);
+	}
+
+	.menuContainer li:nth-child(6n+5) a:hover,
+	.menuContainer li:nth-child(6n+5) a:active,
+	.menuContainer li:nth-child(6n+5) a:focus {
+		background: rgb(39, 70, 90);
+	}
+
+	.menuContainer li:nth-child(6n+6) a:hover,
+	.menuContainer li:nth-child(6n+6) a:active,
+	.menuContainer li:nth-child(6n+6) a:focus {
+		background: rgb(32, 54, 68);
+	}
+
+	.menuContainer ul li {
+		-webkit-transition: background 0.5s;
+		-moz-transition: background 0.5s;
+		-o-transition: background 0.5s;
+		-ms-transition: background 0.5s;
+		transition: background 0.5s;
+	}	
+
+}
+
+/* Adapting the font size and width for smaller screns*/
+@media (min-width: 32.5em) and (max-width: 38.688em) {
+
+	.menuContainer li span.icon {
+		width: 50%;
+	}
+
+	.menuContainer li .icon + span {
+		font-size: 0.9em;
+	}
+}
+
+/* Styling the toggle menu link and hiding it */
+.menuContainer .navtoogle{
+	display: none;	
+	width: 100%;
+	padding: 0.5em 0.5em 0.8em;
+	font-family: 'Lato',Calibri,Arial,sans-serif;
+	font-weight: normal;
+	text-align: left;
+	color: rgb(7, 16, 15);
+	font-size: 1.2em;
+	background: none;	
+	border: none;
+	border-bottom: 4px solid rgb(221, 221, 221);
+	cursor: pointer;
+}
+
+.navtoogle i{
+	z-index:-1;
+}
+
+.icon-menu {
+	position: relative;
+	top: 3px;
+	line-height: 0;
+	font-size: 1.6em;
+}
+
+@media (max-width: 32.438em) {
+
+	/* Unhiding the styled menu link */
+	.menuContainer .navtoogle{
+		margin: 0;
+		display: block;
+	}
+	
+	/* Animating the height of the navigation when the button is clicked */
+	
+	/* When JavaScript is disabled, we hide the menu */
+	.no-js .menuContainer ul {
+		max-height: 30em;
+		overflow: hidden;
+	}
+	
+	/* When JavaScript is enabled, we hide the menu */
+	.menuContainer ul {
+		max-height: 0em;
+		overflow: hidden;
+	}
+	
+	/* Displaying the menu when the user has clicked on the button*/
+	.menuContainer .active + ul {		
+		max-height: 30em;
+		overflow: hidden;
+		-webkit-transition: max-height .4s;
+		-moz-transition: max-height .4s;
+		-o-transition: max-height .4s;
+		-ms-transition: max-height .4s;
+		transition: max-height .4s;
+	}
+
+	/* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
+	
+	.menuContainer li span {
+		display: inline-block;
+		height: 100%;
+	}
+
+	.menuContainer a {
+		padding: 0.5em;		
+	}
+	
+	.icon + span {
+		margin-left: 1em;
+		font-size: 0.8em;
+	}
+	
+	/* Adding a left border of 8 px with a different color for each menu item*/
+	.menuContainer li:nth-child(6n+1) {
+		border-left: 8px solid rgb(174, 78, 1);
+	}
+
+	.menuContainer li:nth-child(6n+2) {
+		border-left: 8px solid rgb(191, 117, 20);
+	}
+
+	.menuContainer li:nth-child(6n+3) {
+		border-left: 8px solid rgb(13, 111, 150);
+	}
+
+	.menuContainer li:nth-child(6n+4) {
+		border-left: 8px solid rgb(10, 75, 117);
+	}
+
+	.menuContainer li:nth-child(6n+5) {
+		border-left: 8px solid rgb(16, 34, 44);
+	}
+
+	.menuContainer li:nth-child(6n+6) {
+		border-left: 8px solid rgb(9, 18, 25);
+	}
+
+	/* make the nav bigger on touch screens */
+	.touch .menuContainer a {
+		padding: 0.8em;
+	}
+}
+

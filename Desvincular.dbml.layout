@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="Desvincular">
+  <DataContextMoniker Name="/DesvincularDataContext" />
+  <nestedChildShapes>
+    <classShape Id="95020a3d-46a8-4df6-9aab-d2fb5221383e" absoluteBounds="0.5, 2.375, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/DesvincularDataContext/Integrantes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88b03444-f72e-4851-b45b-d1ab1f470653" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9933ddc6-57a6-4479-a275-021721edf5c5" isExpanded="false" absoluteBounds="2, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DesvincularDataContext/REGISDIG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00439975-5ae4-4b75-aaef-4de1829a4143" absoluteBounds="2.015, 0.96, 1.9700000000000002, 7.767435709635417" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="15d01f89-9715-4597-8a33-55c0697c749d" absoluteBounds="4.75, 0.75, 2, 7.9987410481770826">
+      <DataClassMoniker Name="/DesvincularDataContext/REGISTRO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bb6ceec-434e-4591-b688-0d5efec00e01" absoluteBounds="4.7650000000000006, 1.21, 1.9700000000000002, 7.438741048177083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 0.95); (3 : 1.325); (4.375 : 1.325); (4.375 : 0.375); (5.75 : 0.375); (5.75 : 0.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DesvincularDataContext/REGISDIG/REGISDIG_REGISTRO" />
+      <nodes>
+        <classShapeMoniker Id="9933ddc6-57a6-4479-a275-021721edf5c5" />
+        <classShapeMoniker Id="15d01f89-9715-4597-8a33-55c0697c749d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 3.16959757486979); (2.5 : 3.16959757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DesvincularDataContext/REGISTRO/REGISTRO_Integrantes" />
+      <nodes>
+        <classShapeMoniker Id="15d01f89-9715-4597-8a33-55c0697c749d" />
+        <classShapeMoniker Id="95020a3d-46a8-4df6-9aab-d2fb5221383e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.25 : 0.95); (2.25 : 2.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DesvincularDataContext/REGISDIG/REGISDIG_Integrantes" />
+      <nodes>
+        <classShapeMoniker Id="9933ddc6-57a6-4479-a275-021721edf5c5" />
+        <classShapeMoniker Id="95020a3d-46a8-4df6-9aab-d2fb5221383e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="998b99fe-2272-4e7e-baf6-3c08086eb7bc" absoluteBounds="0.5, 5, 1.25, 1.5891951497395831">
+      <DataClassMoniker Name="/DesvincularDataContext/SECTORES" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f114faf-0399-4702-ba28-ce040e7b7f6d" absoluteBounds="0.515, 5.46, 1.2200000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.75 : 5.79459757486979); (4.75 : 5.79459757486979)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DesvincularDataContext/SECTORES/SECTORES_REGISTRO" />
+      <nodes>
+        <classShapeMoniker Id="998b99fe-2272-4e7e-baf6-3c08086eb7bc" />
+        <classShapeMoniker Id="15d01f89-9715-4597-8a33-55c0697c749d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="e01e93b8-5675-438b-b5ec-6ecb2f86f63a" absoluteBounds="7.375, 2.75, 2, 1.0961531575520833">
+      <DataClassMoniker Name="/DesvincularDataContext/ProvinciasMail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25274b9b-fe34-40a5-a7ad-270266b4d2dd" absoluteBounds="7.39, 3.21, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 2.75); (8.375 : 0.59375); (4 : 0.59375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DesvincularDataContext/ProvinciasMail/ProvinciasMail_REGISDIG" />
+      <nodes>
+        <classShapeMoniker Id="e01e93b8-5675-438b-b5ec-6ecb2f86f63a" />
+        <classShapeMoniker Id="9933ddc6-57a6-4479-a275-021721edf5c5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

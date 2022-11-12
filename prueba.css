@@ -1,0 +1,67 @@
+.lista{
+	position: relative;
+	padding: 0;
+	width: 100%;
+	display: inline-block;
+}
+
+.item{
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	float: left;
+	text-align: center;
+}
+
+.bg{
+	width: 100% ;
+	height: auto !important;
+}
+
+#slider{
+	padding: 0;
+	margin: 0;
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	overflow-x: hidden;
+}
+
+ol#controls{
+		position: relative;
+		display: block;
+        padding:0;
+        height:5%;
+        list-style-type: none;
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0px;
+		-webkit-margin-end: 0px;
+		-webkit-padding-start: 0px;
+		margin-top: -0.8em;
+		z-index:5;
+}
+ol#controls li{
+        margin:0 10px 0 0;
+        padding:0;
+        float:left;
+        list-style:none;
+        height:28px;
+        line-height:28px;
+}
+ol#controls li a{
+        float:left;
+        height:28px;
+        line-height:28px;
+        border:1px solid #ccc;
+        background:#ffffff;
+        color:#555;
+        padding:0 10px;
+        text-decoration:none;
+}
+ol#controls li.current a{
+        background:#666666;
+        color:#fff;
+}
+ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}

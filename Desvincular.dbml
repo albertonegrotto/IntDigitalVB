@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="INTEATRODIG" Class="DesvincularDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=INT03;Initial Catalog=INTEATRODIG_PRUEBA;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="INTEATRODIGConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Integrantes" Member="Integrantes">
+    <Type Name="Integrantes">
+      <Column Name="idIntegrante" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="codigoRegistro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CUIL" Type="System.Decimal" DbType="Decimal(11,0)" CanBeNull="true" />
+      <Column Name="fechaAlta" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="fechaBaja" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="REGISTRO_Integrantes" Member="REGISTRO" ThisKey="codigoRegistro" Type="REGISTRO" IsForeignKey="true" />
+      <Association Name="REGISDIG_Integrantes" Member="REGISDIG" ThisKey="CUIL" OtherKey="CUIL" Type="REGISDIG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISDIG" Member="REGISDIG">
+    <Type Name="REGISDIG">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PROVINCIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PERSONA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CUIL" Type="System.Decimal" DbType="Decimal(11,0) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHNAC" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDO" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SEXO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LOCALIDAD" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COPOST" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DOMIPART" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PREFIPART" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TELEPART" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PREFICELU" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CELUPART" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CONTRASENA" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="PREGUNTA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RESPUESTA" Type="System.String" DbType="Char(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="PERSONERIA" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOMICILIO" Type="System.String" DbType="Char(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FECHALTA" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FECHMODI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NACIONAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RESIDENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOCUMENTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OPEBAJA" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FECHBAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACTIVIDAD1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD5" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD6" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD7" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD8" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD9" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD10" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD11" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD12" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD13" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTIVIDAD14" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="confirmado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CAMBCLAVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDEntidadSociedad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="REGISDIG_Integrantes" Member="Integrantes" ThisKey="CUIL" OtherKey="CUIL" Type="Integrantes" />
+      <Association Name="REGISDIG_REGISTRO" Member="REGISTRO" OtherKey="RESPONSABLE" Type="REGISTRO" />
+      <Association Name="ProvinciasMail_REGISDIG" Member="ProvinciasMail" ThisKey="PROVINCIA" Type="ProvinciasMail" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.REGISTRO" Member="REGISTRO">
+    <Type Name="REGISTRO">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="REGISTRO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="RESPONSABLE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SECTOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DENOMINACION" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="LOCALIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="provincia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COPOST" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DOMICILIO" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="PREFIJO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="PAGINA" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="LOCALIDADES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ESPACIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMESPACIO" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="HABILITACION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ESPAESCEN" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="EQUIPAMIENTO" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="CONTRASENA" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="PREGUNTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RESPUESTA" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="ESPAPROP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CURRICULUM" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PROGRASIST" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="INIDOCENTE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="cv" Type="System.String" DbType="VarChar(3000)" CanBeNull="true" />
+      <Column Name="AUTOR" Type="System.String" DbType="Char(100)" CanBeNull="true" />
+      <Column Name="TIPOPUBLI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="INICIOACTIV" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHCONSTI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHACTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VIGENCIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIPOEVEN" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESDE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HASTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHALTA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHMODI" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OPEBAJA" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="FECHBAJA" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CONFIRMADO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MAILREG" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TEXTOBAJA" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Association Name="REGISTRO_Integrantes" Member="Integrantes" OtherKey="codigoRegistro" Type="Integrantes" />
+      <Association Name="REGISDIG_REGISTRO" Member="REGISDIG" ThisKey="RESPONSABLE" Type="REGISDIG" IsForeignKey="true" />
+      <Association Name="SECTORES_REGISTRO" Member="SECTORES" ThisKey="SECTOR" Type="SECTORES" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SECTORES" Member="SECTORES">
+    <Type Name="SECTORES">
+      <Column Name="CODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIP" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="CODIVIEJO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ENTIDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SOCIEDAD" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="SECTORES_REGISTRO" Member="REGISTRO" OtherKey="SECTOR" Type="REGISTRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProvinciasMail" Member="ProvinciasMail">
+    <Type Name="ProvinciasMail">
+      <Column Name="idProvincia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mail" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Association Name="ProvinciasMail_REGISDIG" Member="REGISDIG" OtherKey="PROVINCIA" Type="REGISDIG" />
+    </Type>
+  </Table>
+</Database>
