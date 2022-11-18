@@ -35,7 +35,7 @@
 
     End Function
     Function getSexo() As String
-        If quien.Persona = "FISICA" Then
+        If quien.Persona = "HUMANA" Then
             Return "<strong>Sexo: </strong><span class='datolight'>" + quien.Sexo.ToString + "</span>"
         Else
             Return "<strong>Personería: </strong><span class='datolight'>" + quien.personeria + "</span>"
@@ -66,7 +66,7 @@
     End Function
 
     Function getCelu() As String
-        If quien.Persona = "FISICA" Then
+        If quien.Persona = "HUMANA" Then
             Return "<strong>Teléfono Celular: </strong><span class='datolight'>" + quien.TelefonoParticular + "</span>"
         Else
             Return ""

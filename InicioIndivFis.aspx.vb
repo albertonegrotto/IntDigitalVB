@@ -362,6 +362,11 @@ Partial Public Class InicioIndivFis
                 Return
             End If
         End If
+        If Len(RTrim(TextBoxPrefTelPart.Text)) + Len(RTrim(TextBoxTelPart.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
+        End If
         If Len(RTrim(TextBoxPrefCelu.Text)) > 0 Then
             Try
                 wpreficelu = CInt(TextBoxPrefCelu.Text)
@@ -390,6 +395,11 @@ Partial Public Class InicioIndivFis
                 Return
             End If
         End If
+        If Len(RTrim(TextBoxPrefCelu.Text)) + Len(RTrim(TextBoxCelular.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
+        End If
         If (wprefipart = 0 Or wtelepart = 0) And (wpreficelu = 0 Or wcelupart = 0) Then
             lblErrorTelefono.Text = " Debe ingresar por lo menos un Teléfono"
             TextBoxPrefCelu.Focus()
@@ -410,6 +420,13 @@ Partial Public Class InicioIndivFis
             TextBoxConfMail.Focus()
             Return
         End If
+        Dim arr As Integer = TextBoxMail.Text.Trim.IndexOf("@")
+        If arr <= 0 And Len(TextBoxMail.Text.Trim) > 0 Then
+            lblErrorTextBoxMail.Text = " Cuenta de Correo Electrónica errónea"
+            TextBoxConfMail.Focus()
+            Return
+        End If
+
         Dim wcontrasena As String = TextBoxContra.Text.Trim
         If Len(wcontrasena) <> 8 Then
             lblErrorTextBoxContra.Text = "Debe ingresar 8 caracteres"
@@ -826,8 +843,8 @@ Partial Public Class InicioIndivFis
             sBody += "Teléfono Particular: " & wprefipart.ToString & " " & wtelepart.ToString & "<br />"
             sBody += "Teléfono Celular: " & wpreficelu.ToString & " 15" & wcelupart.ToString & "<br />"
             sBody += "<br />"
-            sBody += Mail.GetTextoAviso(MAIL_ALTA_INDIV_FIS) & "<br />"
-            sBody += "<br />"
+            'sBody += Mail.GetTextoAviso(MAIL_ALTA_INDIV_FIS) & "<br />"
+            'sBody += "<br />"
             'sBody += "Click para confirmar<br />"
             sBody += Mail.GetLink(MAIL_ALTA_INDIV_FIS, wcod) & "<br />"
             sBody += "<br />"

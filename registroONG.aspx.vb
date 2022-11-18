@@ -1292,6 +1292,16 @@ Partial Public Class registroONG
             txtPrefijoCelular1.Focus()
             Return False
         End If
+        If Len(RTrim(txtPrefijoCelular1.Text)) + Len(RTrim(txtNumeroCelular1.Text)) > 10 Then
+            txtErrorTelefono1.Text = "Número de Celular Erróneo"
+            txtPrefijoCelular1.Focus()
+            Return False
+        End If
+        If Len(RTrim(txtPrefijo1.Text)) + Len(RTrim(txtNumero1.Text)) > 10 Then
+            txtErrorTelefono1.Text = "Número de TE Erróneo"
+            txtPrefijo1.Focus()
+            Return False
+        End If
 
         If ddlSexo1.SelectedValue = 0 Then
             lblErrorddlSexo1.Text = "Seleccione Género"
@@ -1410,6 +1420,16 @@ Partial Public Class registroONG
                         txtPrefijoCelular2.Focus()
                         Return False
                     End If
+                    If Len(RTrim(txtPrefijoCelular2.Text)) + Len(RTrim(txtNumeroCelular2.Text)) > 10 Then
+                        txtErrorTelefono2.Text = "Número de Celular Erróneo"
+                        txtPrefijoCelular2.Focus()
+                        Return False
+                    End If
+                    If Len(RTrim(txtPrefijo2.Text)) + Len(RTrim(txtNumero2.Text)) > 10 Then
+                        txtErrorTelefono2.Text = "Número de TE Erróneo"
+                        txtPrefijo2.Focus()
+                        Return False
+                    End If
 
                     If DdlSexo2.SelectedValue = 0 Then
                         LblErrorDddlsexo2.Text = "Seleccione Género"
@@ -1503,6 +1523,16 @@ Partial Public Class registroONG
                     txtPrefijoCelular3.Focus()
                     Return False
                 End If
+                If Len(RTrim(txtPrefijoCelular3.Text)) + Len(RTrim(txtNumeroCelular3.Text)) > 10 Then
+                    TxtErrorTelefono3.Text = "Número de Celular Erróneo"
+                    txtPrefijoCelular3.Focus()
+                    Return False
+                End If
+                If Len(RTrim(txtPrefijo3.Text)) + Len(RTrim(TxtNumero3.Text)) > 10 Then
+                    TxtErrorTelefono3.Text = "Número de TE Erróneo"
+                    txtPrefijo3.Focus()
+                    Return False
+                End If
 
                 If DdlSexo3.SelectedValue = 0 Then
                     LblErrorDdlsexo3.Text = "Seleccione Género"
@@ -1591,6 +1621,16 @@ Partial Public Class registroONG
                 If Len(txtPrefijoCelular4.Text.Trim) = 0 Or Len(txtNumeroCelular4.Text.Trim) = 0 Then
                     TxtErrorTelefono4.Text = "El número de TE Celular es Obligatorio"
                     txtPrefijoCelular4.Focus()
+                    Return False
+                End If
+                If Len(RTrim(txtPrefijoCelular4.Text)) + Len(RTrim(txtNumeroCelular4.Text)) > 10 Then
+                    TxtErrorTelefono4.Text = "Número de Celular Erróneo"
+                    txtPrefijoCelular4.Focus()
+                    Return False
+                End If
+                If Len(RTrim(txtPrefijo4.Text)) + Len(RTrim(TxtNumero4.Text)) > 10 Then
+                    TxtErrorTelefono4.Text = "Número de TE Erróneo"
+                    txtPrefijo4.Focus()
                     Return False
                 End If
 

@@ -12,7 +12,6 @@ Partial Public Class confirmarRegistracion
         Dim sTipoOperacion As String = ""
         Dim sIdIntegrante As String
 
-
         If Not Page.IsPostBack Then
             quien = CType(Session("usuario"), usuario)
             Session("codigo") = quien.Codigo
@@ -60,19 +59,19 @@ Partial Public Class confirmarRegistracion
                         sSubject = "Confirmación de Inscripción de Persona Física Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_ALTA_INDIV_FIS) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
 
                     ElseIf sTipoOperacion = "M" Then
                         sSubject = "Confirmación de Modificación de Persona Física Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_MODIF_INDIV_FIS) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
 
                     ElseIf sTipoOperacion = "K" Then
                         sSubject = "Confirmación de Modificación de Integrante Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_MODIF_INTEGRANTE_A_RESPONSABLE_FIS) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sIdIntegrante, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sIdIntegrante, TIPO_PERSONA), sSubject, sBody)
 
                     End If
 
@@ -82,19 +81,19 @@ Partial Public Class confirmarRegistracion
                         sSubject = "Confirmación de Inscripción de Persona Jurídica Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_ALTA_INDIV_JUR) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
 
                     ElseIf sTipoOperacion = "M" Then
                         sSubject = "Confirmación de Modificación de Persona Jurídica Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_MODIF_INDIV_JUR) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sId, TIPO_PERSONA), sSubject, sBody)
 
                     ElseIf sTipoOperacion = "K" Then
                         sSubject = "Confirmación de Modificación de Integrante Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_MODIF_INTEGRANTE_A_RESPONSABLE_JUR) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(sIdIntegrante, TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(sIdIntegrante, TIPO_PERSONA), sSubject, sBody)
 
                     End If
 
@@ -105,7 +104,7 @@ Partial Public Class confirmarRegistracion
                         sSubject = "Confirmación de Inscripción Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_ALTA_REGISTRO, GetTipoRegistro(GetIdSector(sId))) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(Session("USER_ID"), TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(Session("USER_ID"), TIPO_PERSONA), sSubject, sBody)
                         ViewState("ENVIAR_A_IMPRESION") = True
 
                     ElseIf sTipoOperacion = "M" Then
@@ -113,13 +112,12 @@ Partial Public Class confirmarRegistracion
                         sSubject = "Confirmación de Modificación Nº " & sId
                         sBody += Mail.GetTextoAviso(CONF_MODIF_REGISTRO, GetTipoRegistro(GetIdSector(sId))) & "<br />"
                         sBody += "<br />"
-                        sResult = SendMail(Mail.GetMailTo(Session("USER_ID"), TIPO_PERSONA), sSubject, sBody)
+                        'sResult = SendMail(Mail.GetMailTo(Session("USER_ID"), TIPO_PERSONA), sSubject, sBody)
                         ViewState("ENVIAR_A_IMPRESION") = True
 
                     End If
 
                 End If
-
                 lblResultado.Text = "Confirmado"
             Else
                 lblResultado.Text = "No se pudo actualizar, por favor intente nuevamente"

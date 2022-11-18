@@ -1334,7 +1334,7 @@ Partial Public Class registroTeatro
             Return False
         End If
         Session("localidades") = wcant1 + wcant2 + wcant3 + wcant4
-        'If quien.Persona = "FISICA" And ds.Integrantes.Count < 1 Then
+        'If quien.Persona = "HUMANA" And ds.Integrantes.Count < 1 Then
         '    txtErrorIntegrante.Text = "Debe ingresar al menos 1 integrante"
         '    Return False
         'ElseIf quien.Persona = "JURIDICA" And ds.Integrantes.Count < 2 Then
@@ -1375,6 +1375,13 @@ Partial Public Class registroTeatro
         End If
         Dim wfecha As Date = DateAndTime.Now
         Dim nCantespacios As Integer = DdlCantidadEspacios.SelectedValue
+
+        If Len(RTrim(txtPrefijo.Text)) + Len(RTrim(txtNumero.Text)) > 10 Then
+            txtErrorLocalidades.Text = "Número de Teléfono Erróneo"
+            txtPrefijo.Focus()
+            Return False
+        End If
+
         Try
             sHabilitacion = DdlDocumentacion.SelectedValue.ToString
             wfecha = CDate(TextDesde.Value)

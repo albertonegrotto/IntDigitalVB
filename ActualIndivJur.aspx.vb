@@ -35,7 +35,7 @@ Partial Public Class ActualIndivJur
         quien = CType(Session("usuario"), usuario)
         Session("Cuit") = quien.Usuario
         Session("id_provincia") = quien.codprovin
-        If quien.Persona = "Fisica" Then
+        If quien.Persona = "HUMANA" Then
             Session("id_persona") = 1
         Else
             Session("id_persona") = 2
@@ -79,7 +79,7 @@ Partial Public Class ActualIndivJur
         cn.Close()
         dr6.Close()
         cn.Open()
-        Dim sql7 As String = "select 0 as codigo,' Seleccione Pregunta' as descrip union select codigo,descrip from recupcontra"
+        Dim sql7 As String = "select 0 as codigo,' Seleccione Pregunta' as descrip union select codigo,descrip from recupcontra where codigo in (1,3,5)"
         Dim Psql7 As New SqlClient.SqlCommand(sql7, cn)
         Dim dr7 As SqlClient.SqlDataReader = Psql7.ExecuteReader
         DdlPregunta.DataSource = dr7
@@ -147,11 +147,13 @@ Partial Public Class ActualIndivJur
         TextBoxCopost.Text = wCOPOST.ToString
         TextBoxPrefTelPart.Text = wPREFIPART.ToString
         TextBoxTelPart.Text = wTELEPART.ToString
-        TextBoxMail.Text = wEMAIL
-        TextBoxConfMail.Text = wEMAIL
+        'TextBoxMail.Text = wEMAIL
+        'TextBoxConfMail.Text = wEMAIL
         'TextBoxContra.Text = wCONTRASENA
-        DdlPregunta.SelectedValue = wPREGUNTA
-        TextBoxRespuesta.Text = wRESPUESTA
+        If wPREGUNTA = 1 Or wPREGUNTA = 3 Or wPREGUNTA = 5 Then
+            DdlPregunta.SelectedValue = wPREGUNTA
+            TextBoxRespuesta.Text = wRESPUESTA
+        End If
         'TextBoxReContra.Text = wCONTRASENA
         CheckBoxAcepto.Checked = True
         ddlEntidadSociedad.SelectedValue = GetValorEntidadSociedad(wEntidadSociedad)
@@ -272,6 +274,12 @@ Partial Public Class ActualIndivJur
                 Return
             End If
         End If
+        If Len(RTrim(TextBoxPrefTelPart.Text)) + Len(RTrim(TextBoxTelPart.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
+        End If
+
         'If (wprefipart = 0 Or wtelepart = 0) Then
         '    lblErrorTelefono.Text = " Debe ingresar el Teléfono"
         '    TextBoxPrefTelPart.Focus()
@@ -303,6 +311,12 @@ Partial Public Class ActualIndivJur
         Dim wcopost = CInt(TextBoxCopost.Text)
         Dim wdomipart As String = RTrim(TextBoxDomicilio.Text).ToUpper
         Dim wemail As String = RTrim(TextBoxMail.Text)
+        Dim arr As Integer = TextBoxMail.Text.Trim.IndexOf("@")
+        If arr <= 0 And Len(TextBoxMail.Text.Trim) > 0 Then
+            lblErrorTextBoxMail.Text = " Cuenta de Correo Electrónica errónea"
+            TextBoxConfMail.Focus()
+            Return
+        End If
 
         If Funciones.CaracteresEspecialesnumeros(wdenominacion) Then
             FailureText.Text = "La denominación contiene caracteres especiales"
@@ -384,8 +398,8 @@ Partial Public Class ActualIndivJur
             'sBody += "Teléfono Particular: " & wprefipart.ToString & " " & wtelepart.ToString & "<br />"
             sBody += "<br />"
 
-            sBody += Mail.GetTextoAviso(MAIL_MODIF_INDIV_JUR) & "<br />"
-            sBody += "<br />"
+            'sBody += Mail.GetTextoAviso(MAIL_MODIF_INDIV_JUR) & "<br />"
+            'sBody += "<br />"
 
             'sBody += "Click para confirmar<br />"
             sBody += Mail.GetLink(MAIL_MODIF_INDIV_JUR, LabelSoli.Text.Trim) & "<br />"

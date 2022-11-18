@@ -488,7 +488,7 @@ Partial Public Class registroPublicacion
 
         End If
 
-        'If quien.Persona = "FISICA" And ds.Integrantes.Count < 1 Then
+        'If quien.Persona = "HUMANA" And ds.Integrantes.Count < 1 Then
         '    txtIntegrante.Text = "Debe ingresar al menos 1 integrante"
         '    Return False
         'ElseIf quien.Persona = "JURIDICA" And ds.Integrantes.Count < 2 Then
@@ -720,6 +720,12 @@ Partial Public Class registroPublicacion
         Const F_TIPO_PUBLICACION As Integer = 11
         Const F_INICIO As Integer = 12
         'Const F_FECHALTA As Integer = 13
+
+        If Len(RTrim(TxtPrefijo.Text)) + Len(RTrim(TxtNumero.Text)) > 10 Then
+            lblErrorTelefono.Text = "Número de TE Incorrecto"
+            TxtPrefijo.Focus()
+            Return
+        End If
 
         Dim sSQLCmd As String
         Dim MyConnection As SqlConnection

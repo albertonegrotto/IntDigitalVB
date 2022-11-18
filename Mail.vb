@@ -83,16 +83,17 @@ Public Module Mail
 
         Dim plainView As AlternateView = AlternateView.CreateAlternateViewFromString(sBody, Nothing, "text/plain")
 
-        Dim htmlView As AlternateView = AlternateView.CreateAlternateViewFromString("<img src=cid:companylogo>" + "<br />" + sBody + "<img src=cid:pielogo>", Nothing, "text/html")
+        'Dim htmlView As AlternateView = AlternateView.CreateAlternateViewFromString("<img src=cid:companylogo>" + "<br />" + sBody + "<img src=cid:pielogo>", Nothing, "text/html")
+        Dim htmlView As AlternateView = AlternateView.CreateAlternateViewFromString("<img src=cid:companylogo>" + "<br />" + sBody, Nothing, "text/html")
         'Dim logo As New LinkedResource("D:\FUENTES\INTeatroDigVB_Mobile\INTeatroDig\images\plataforma.jpg")
         'Dim pie As New LinkedResource("D:\FUENTES\INTeatroDigVB_Mobile\INTeatroDig\images\pie_email.png")
         Dim logo As New LinkedResource("C:\inetpub\wwwroot\IntDig_Prueba\images\plataforma.jpg")
-        Dim pie As New LinkedResource("C:\inetpub\wwwroot\IntDig_Prueba\images\pie_email.png")
+        'Dim pie As New LinkedResource("C:\inetpub\wwwroot\IntDig_Prueba\images\pie_email.png")
 
         logo.ContentId = "companylogo"
-        pie.ContentId = "pielogo"
+        'pie.ContentId = "pielogo"
         htmlView.LinkedResources.Add(logo)
-        htmlView.LinkedResources.Add(pie)
+        'htmlView.LinkedResources.Add(pie)
         correo.AlternateViews.Add(plainView)
         correo.AlternateViews.Add(htmlView)
 

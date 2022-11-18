@@ -125,6 +125,7 @@
     Private Sub Verificar()
         cn.Open()
         Dim sql As String = "select codigo,descrip from recupcontra where codigo = (Select Pregunta from Regisdig where cuil = " & Username.Text & ")"
+        'Dim sql As String = "select codigo,descrip from recupcontra where codigo in (1,3,5)"
         Dim Psql As New SqlClient.SqlCommand(sql, cn)
         Dim dr As SqlClient.SqlDataReader = Psql.ExecuteReader
         DdlPregunta.DataSource = dr
@@ -146,25 +147,29 @@
         If Len(RTrim(wemail)) > 0 Then
             BtnEnviar.Enabled = True
             Dim arr As Integer = wemail.IndexOf("@")
-            Dim mail As String = Left(wemail, arr)
-            Dim nombre As String = ""
-            Dim m As Integer = 1
-            Dim s As Integer = 0
-            While m <= arr
-                If m <= 3 Then
-                    nombre = nombre + Mid(mail, m, 1)
-                Else
-                    If s < 4 Then
-                        nombre = nombre + "X"
-                        s = s + 1
-                    Else
+            If arr > 0 Then
+                Dim mail As String = Left(wemail, arr)
+                Dim nombre As String = ""
+                Dim m As Integer = 1
+                Dim s As Integer = 0
+                While m <= arr
+                    If m <= 3 Then
                         nombre = nombre + Mid(mail, m, 1)
+                    Else
+                        If s < 4 Then
+                            nombre = nombre + "X"
+                            s = s + 1
+                        Else
+                            nombre = nombre + Mid(mail, m, 1)
+                        End If
                     End If
-                End If
-                m = m + 1
-            End While
-            nombre = nombre + Mid(wemail, arr + 1, Len(wemail) - arr)
-            LabelEmail.Text = nombre
+                    m = m + 1
+                End While
+                nombre = nombre + Mid(wemail, arr + 1, Len(wemail) - arr)
+                LabelEmail.Text = nombre
+            Else
+                LabelEmail.Text = wemail
+            End If
         Else
             FailureText.Text = "CUIT / CUIL no registrado"
             BtnEnviar.Enabled = False

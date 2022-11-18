@@ -461,7 +461,7 @@
           </div>
           <div class="col-md-9 col-centered" style="text-align: center; font-family:'Trebuchet MS'; font-size:small">
 	            <!-- Gridview -->
-                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AllowPaging="True"
+                <asp:GridView ID="GridView1" runat="server" AllowSorting="True" 
                           CssClass="table table-bordered" AutoGenerateColumns="False" DataKeyNames="idIntegrante">
                     <Columns>                  
                         <asp:BoundField ItemStyle-Width="22" ItemStyle-HorizontalAlign="Center" 

@@ -454,8 +454,8 @@ Partial Public Class registroEspectaculo
         txtDenominacion.Text = LimpiarCaracteres(txtDenominacion.Text.Trim)
         Dim nCantidad As Integer
         nCantidad = GridView1.Rows.Count()
-        If quien.Persona = "FISICA" And nCantidad <1 Then
-            txtErrorIntegrante.Text="Debe ingresar al menos 1 integrante"
+        If quien.Persona = "HUMANA" And nCantidad < 1 Then
+            txtErrorIntegrante.Text = "Debe ingresar al menos 1 integrante"
             txtErrorIntegrante.Focus()
             Return False
         End If

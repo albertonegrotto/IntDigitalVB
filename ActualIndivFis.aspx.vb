@@ -24,7 +24,7 @@ Partial Public Class ActualIndivFis
             If User.Identity.IsAuthenticated Then
                 quien = CType(Session("usuario"), usuario)
                 Session("id_provincia") = quien.codprovin
-                If quien.Persona = "FISICA" Then
+                If quien.Persona = "HUMANA" Then
                     Session("id_persona") = 1
                 Else
                     Session("id_persona") = 2
@@ -165,7 +165,7 @@ Partial Public Class ActualIndivFis
         cn.Close()
         dr6.Close()
         cn.Open()
-        Dim sql7 As String = "select 0 as codigo,' Seleccione Pregunta' as descrip union select codigo,descrip from recupcontra"
+        Dim sql7 As String = "select 0 as codigo,' Seleccione Pregunta' as descrip union select codigo,descrip from recupcontra where codigo in (1,3,5)"
         Dim Psql7 As New SqlClient.SqlCommand(sql7, cn)
         Dim dr7 As SqlClient.SqlDataReader = Psql7.ExecuteReader
         DdlPregunta.DataSource = dr7
@@ -316,8 +316,10 @@ Partial Public Class ActualIndivFis
         'TextBoxMail.Text = wEMAIL
         'TextBoxConfMail.Text = wEMAIL
         'TextBoxContra.Text = wCONTRASENA
-        DdlPregunta.SelectedValue = wPREGUNTA
-        TextBoxRespuesta.Text = wRESPUESTA
+        If wPREGUNTA = 1 Or wPREGUNTA = 3 Or wPREGUNTA = 5 Then
+            DdlPregunta.SelectedValue = wPREGUNTA
+            TextBoxRespuesta.Text = wRESPUESTA
+        End If
         'TextBoxReContra.Text = wCONTRASENA
         CheckBoxAcepto.Checked = True
         CheckBox1.Checked = True 'Aceptación correo
@@ -825,6 +827,11 @@ Partial Public Class ActualIndivFis
                 Return
             End If
         End If
+        If Len(RTrim(TextBoxPrefTelPart.Text)) + Len(RTrim(TextBoxTelPart.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
+        End If
         If Len(RTrim(TextBoxPrefCelu.Text)) > 0 Then
             Try
                 wpreficelu = CInt(TextBoxPrefCelu.Text)
@@ -838,6 +845,10 @@ Partial Public Class ActualIndivFis
                 TextBoxPrefCelu.Focus()
                 Return
             End If
+        Else
+            lblErrorCelular.Text = " Complete datos del TE celular"
+            TextBoxPrefCelu.Focus()
+            Return
         End If
         If Len(RTrim(TextBoxCelular.Text)) > 0 Then
             Try
@@ -852,6 +863,15 @@ Partial Public Class ActualIndivFis
                 TextBoxPrefCelu.Focus()
                 Return
             End If
+        Else
+            lblErrorCelular.Text = " Complete datos del TE celular"
+            TextBoxPrefCelu.Focus()
+            Return
+        End If
+        If Len(RTrim(TextBoxPrefCelu.Text)) + Len(RTrim(TextBoxCelular.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
         End If
         If (wprefipart = 0 Or wtelepart = 0) And (wpreficelu = 0 Or wcelupart = 0) Then
             lblErrorTelefono.Text = " Debe ingresar por lo menos un Teléfono"
@@ -873,6 +893,13 @@ Partial Public Class ActualIndivFis
             TextBoxConfMail.Focus()
             Return
         End If
+        Dim arr As Integer = TextBoxMail.Text.Trim.IndexOf("@")
+        If arr <= 0 And Len(TextBoxMail.Text.Trim) > 0 Then
+            lblErrorTextBoxMail.Text = " Cuenta de Correo Electrónica errónea"
+            TextBoxConfMail.Focus()
+            Return
+        End If
+
         Dim wpregunta As Integer = DdlPregunta.SelectedValue
         If wpregunta = 0 Then
             lblErrorDdlPregunta.Text = " Debe elegir pregunta de contraseña"
@@ -1397,7 +1424,7 @@ Partial Public Class ActualIndivFis
             Dim sSubject As String
             Dim sBody As String
 
-            sSubject = "INTeatroDigital - Alta Individual de Persona Humana - CUIL " & TextBoxCUIT.Text
+            sSubject = "INTeatroDigital - Actualización de Datos de Persona Humana - CUIL " & TextBoxCUIT.Text
 
             sBody = "Estimada/o usuaria/o de INTeatroDigital: " & wnombre.Trim.ToUpper & " " & wapellido.Trim.ToUpper & " - " & TextBoxCUIT.Text & "<br />" & "<br />"
             sBody += "Se ha recepcionado su gestión de: ACTUALIZACION DE DATOS (PERSONA HUMANA)" & "<br />"
@@ -1416,8 +1443,8 @@ Partial Public Class ActualIndivFis
             sBody += "Teléfono Celular: " & wpreficelu.ToString & " 15" & wcelupart.ToString & "<br />"
             sBody += "<br />"
 
-            sBody += Mail.GetTextoAviso(MAIL_MODIF_INDIV_FIS) & "<br />"
-            sBody += "<br />"
+            'sBody += Mail.GetTextoAviso(MAIL_MODIF_INDIV_FIS) & "<br />"
+            'sBody += "<br />"
 
             'sBody += "Click para confirmar<br />"
             sBody += Mail.GetLink(MAIL_MODIF_INDIV_FIS, LabelSoli.Text.Trim) & "<br />"

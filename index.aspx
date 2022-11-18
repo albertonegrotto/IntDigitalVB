@@ -42,7 +42,7 @@
         function onSuccess(result) {
             if (!result) {
                 $('#inusuario').addClass('error');
-                $('#mje').html('Revisa el CUIT y la Clave Ingresada');
+                $('#mje').html('Revisá el CUIT/CUIL y la Clave Ingresada');
                 $('#helpUsuario2').addClass('helperror');
                 $('#helpUsuario2').slideDown('fast');
             }
@@ -57,7 +57,7 @@
 
         function onFailure(result) {
             $('#inusuario').addClass('error');
-            $('#mje').html('Revisa el CUIT y la Clave Ingresada');
+            $('#mje').html('Revisá el CUIT/CUIL y la Clave Ingresada');
             $('#helpUsuario2').addClass('helperror');
             $('#helpUsuario2').slideDown('fast');
 
@@ -349,7 +349,7 @@
                         <li><a href="https://twitter.com/inteatro_arg/" target="_blank" title="Seguinos en Twitter" class="social social-twitter"></a></li>
                         <li><a href="https://www.youtube.com/channel/UCtMHAAu6xiF-4ZCHvfYo4pA" target="_blank" title="Seguinos en Youtube" class="social social-youtube"></a></li>
                     </ul>
-                    <p style="clear: both;text-align: right;font-size: 12px;">Versión 2.7.0 11-11-2022</p>                    
+                    <p style="clear: both;text-align: right;font-size: 12px;">Versión 2.7.7 18-11-2022</p>                    
                 </div>
             </div>
         </div>

@@ -4,7 +4,6 @@
     ' Dim quien As usuario
     Dim Provincia As Integer
     Dim Persona As Integer
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Provincia = Session("id_provincia")
         Persona = Session("id_persona")
@@ -180,6 +179,11 @@
                 Return
             End If
         End If
+        If Len(RTrim(TextBoxPrefTelPart.Text)) + Len(RTrim(TextBoxTelPart.Text)) > 10 Then
+            lblErrorTelefono.Text = " Teléfono particular Incorrecto"
+            TextBoxPrefTelPart.Focus()
+            Return
+        End If
 
         'If (wprefipart = 0 Or wtelepart = 0) Then
         '    lblErrorTelefono.Text = " Debe ingresar el Teléfono"
@@ -201,6 +205,12 @@
         If YaExiste(sMail) Then
             lblErrorTextBoxMail.Text = " Esta cuenta de correo ya ha sido utilizada por otra persona"
             TextBoxMail.Focus()
+            Return
+        End If
+        Dim arr As Integer = TextBoxMail.Text.Trim.IndexOf("@")
+        If arr <= 0 And Len(TextBoxMail.Text.Trim) > 0 Then
+            lblErrorTextBoxMail.Text = " Cuenta de Correo Electrónica errónea"
+            TextBoxConfMail.Focus()
             Return
         End If
 
@@ -321,8 +331,8 @@
             sBody += "Domicilio: " & wdomipart & "<br />"
             'sBody += "Teléfono Particular: " & wprefipart.ToString & " " & wtelepart.ToString & "<br />"
             sBody += "<br />"
-            sBody += Mail.GetTextoAviso(MAIL_ALTA_INDIV_JUR) & "<br />"
-            sBody += "<br />"
+            'sBody += Mail.GetTextoAviso(MAIL_ALTA_INDIV_JUR) & "<br />"
+            'sBody += "<br />"
             'sBody += "Click para confirmar<br />"
             sBody += Mail.GetLink(MAIL_ALTA_INDIV_JUR, wcod) & "<br />"
             sBody += "<br />"

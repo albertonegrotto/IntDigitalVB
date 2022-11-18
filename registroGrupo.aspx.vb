@@ -630,7 +630,7 @@ Partial Public Class registroGrupo
 
         txtDenominacion.Text = LimpiarCaracteres(txtDenominacion.Text.Trim)
 
-        If quien.Persona = "FISICA" Then
+        If quien.Persona = "HUMANA" Then
             If ds.Integrantes.Count < 1 Then
                 txtErrorIntegrante.Text = "Debe ingresar al menos 1 integrante"
                 txtErrorIntegrante.Focus()

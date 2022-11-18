@@ -47,6 +47,11 @@ Public Class CambiodeMail
             FailureText.Text = "No coincide mail con confirmación"
             Return
         End If
+        Dim arr As Integer = TextBoxNuevoMail.Text.Trim.IndexOf("@")
+        If arr <= 0 And Len(TextBoxNuevoMail.Text.Trim) > 0 Then
+            FailureText.Text = " Cuenta de Correo Electrónica errónea"
+            Return
+        End If
         cn.Open()
         Dim sql As String = "update REGISDIG set email='" & wnuevo & "' where cuil=" & Cuil
         Dim Cmd As New SqlClient.SqlCommand(sql, cn)

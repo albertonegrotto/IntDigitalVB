@@ -84,7 +84,7 @@
     End Function
 
     Function getCelu() As String
-        If quien.Persona = "FISICA" Then
+        If quien.Persona = "HUMANA" Then
             Return "<strong>Teléfono Celular: </strong><span class='datolight'>" + quien.TelefonoCelular + "</span>"
         Else
             Return ""
